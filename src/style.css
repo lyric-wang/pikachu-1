@@ -26,6 +26,17 @@
   border-radius:7px 7px 0 0;
   background:black;
 }
+@keyframes wave{
+  0%{transform: rotateZ(0deg);}
+  25%{transform: rotateZ(-5deg);}
+  50%{transform: rotateZ(0deg);}
+  75%{transform: rotateZ(5deg);}
+  100%{transform: rotateZ(0deg);}
+}
+.nose:hover{
+  transform-origin: center bottom;
+  animation: wave 100ms linear infinite;
+}
 .eye{
   border:2px solid black;
   height:64px;
@@ -105,9 +116,40 @@
   border-radius: 0 0 50% 50%;
   top:-375px;
   background: #9b000a;
+  overflow: hidden;
 }
 .yuan2{
-  border:1px solid black;
   position:absolute;
-  
+  width:100px;
+  height:100px;
+  left:50%;
+  background:#ff485f;
+  border-radius: 50%;
+  transform:translateX(-50%);
+  top:405px;
+  z-index:1;
+}
+.face.left{
+  left:50%;
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  top:230px;
+  border:2px solid black;
+  width:50px;
+  height:50px;
+  margin-left:-25px;
+  transform: translateX(-150px);
+}
+.face.right{
+  left:50%;
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  top:230px;
+  border:2px solid black;
+  width:50px;
+  height:50px;
+  margin-left:-25px;
+  transform: translateX(150px);
 }
